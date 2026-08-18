@@ -33,6 +33,7 @@ def spaceCounter(string: str) -> int:
         return count
 
 def treat(string: str):
+        """treat a string"""
         length = len(string)
         print(f"The text contains {length} characters:")
         print(f"{upperCounter(string)} upper letters")
