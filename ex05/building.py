@@ -32,17 +32,22 @@ def spaceCounter(string: str) -> int:
                 count += 1
         return count
 
+def treat(string: str):
+        length = len(string)
+        print(f"The text contains {length} characters:")
+        print(f"{upperCounter(string)} upper letters")
+        print(f"{lowerCounter(string)} lower letters")
+        print(f"{length - lowerCounter(string) - upperCounter(string) - numberCounter(string) - spaceCounter(string)}  punctuation mark")
+        print(f"{spaceCounter(string)} spaces")
+        print(f"{numberCounter(string)} digits")
+
 def main():
         if len(sys.argv) != 2:
-            print("Usage: python3 building.py <string to treat>")
+            inp = input("What is the text to count?\n")
+            treat(inp + "\n")
         else:
-            length = len(sys.argv[1])
-            print(f"The text contains {length} characters:")
-            print(f"{upperCounter(sys.argv[1])} upper letters")
-            print(f"{lowerCounter(sys.argv[1])} lower letters")
-            print(f"{length - lowerCounter(sys.argv[1]) - upperCounter(sys.argv[1]) - numberCounter(sys.argv[1]) - spaceCounter(sys.argv[1])}  punctuation mark")
-            print(f"{spaceCounter(sys.argv[1])} spaces")
-            print(f"{numberCounter(sys.argv[1])} digits")
+            treat(sys.argv[1])
+           
     
 if __name__ == "__main__":
     main()
