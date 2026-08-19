@@ -9,7 +9,7 @@ def main():
             print("AssertionError: the arguments are bad")
         else:
             res = sys.argv[1].split()
-            res2 = list(filter(filterString , res))
+            res2 = list(ft_filter(filterString , res))
             print(res2)
     except:
         print("AssertionError: the arguments are bad")

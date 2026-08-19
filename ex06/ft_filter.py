@@ -8,4 +8,4 @@ is true. If function is None, return the items that are true."""
     for item in iterable:
         if function(item):
             res.append(item)
-        return res
+    return res
