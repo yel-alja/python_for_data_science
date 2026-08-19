@@ -18,7 +18,7 @@ def encoding():
     res = []
     for i in sys.argv[1]:
         if i.upper() in NESTED_MORSE:
-            res.append(NESTED_MORSE.get(i))
+            res.append(NESTED_MORSE.get(i.upper()))
         else:
             raise ValueError("AssertionError: the arguments are bad")
     return res
