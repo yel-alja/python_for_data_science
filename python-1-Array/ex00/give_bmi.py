@@ -1,7 +1,7 @@
 
 def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
     if len(height) != len(weight):
-            raise ValueError("Value Error")
+            return []
     lst = []
     for i in range(len(height)):
         lst.append(weight[i] /( height[i] * height[i]))
