@@ -1,11 +1,12 @@
+import numpy as np 
 
 def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
     if len(height) != len(weight):
             return []
-    lst = []
+    lst = np.array([])
     for i in range(len(height)):
-        lst.append(weight[i] /( height[i] * height[i]))
-    return lst
+        lst = np.append(lst, weight[i] /( height[i] * height[i]))
+    return list(lst)
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     res = []
