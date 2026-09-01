@@ -4,8 +4,7 @@ from load_csv import load
 
 def main():
     """main function"""
-    load("life_expectancy_years.csv")
-    data  = pd.read_csv("life_expectancy_years.csv")
+    data = load("life_expectancy_years.csv")
     years = data.columns[1:].astype(int)
     morocco = data[data["country"] == "Morocco"].iloc[0]
     plt.plot(years, morocco[1:])
