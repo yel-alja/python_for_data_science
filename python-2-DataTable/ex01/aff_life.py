@@ -7,7 +7,7 @@ def main():
     load("life_expectancy_years.csv")
     data  = pd.read_csv("life_expectancy_years.csv")
     years = data.columns[1:].astype(int)
-    morocco = data[data["country"] == "France"].iloc[0]
+    morocco = data[data["country"] == "Morocco"].iloc[0]
     plt.plot(years, morocco[1:])
     plt.title("Morocco Life Expectancy Projections")
     plt.xlabel("year")
