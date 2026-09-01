@@ -6,5 +6,5 @@ def load(path: str) -> pd.DataFrame:
         return pd.DataFrame([])
     res = pd.read_csv(path)
     print("loading Dataset of dimensions", res.shape)
-    return res.to_string(index=False)
+    return res
 
